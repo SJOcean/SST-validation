@@ -1,10 +1,8 @@
 # -*- coding: utf-8 -*-
 # Seaglider measurements original data process
 # Horizontal and vetical grouping, data quality check
-# Original code
 # Author: Sunjing
 
-# D:\Studies\Marinår3\MAR311\data\glider\2018\raw\sg573\deployment_1
 
 import buoyancy_glider_utils as bgu  # This package can be downloaded from github
 import xarray as xr
@@ -14,9 +12,9 @@ import numpy as np
 import pandas as pd
 from scipy import interpolate
 
-#####################################
-# Load data by using Luke's package #
-#####################################
+####################################################
+# Load data by using buoyancy_glider_utils package #
+####################################################
 
 fname = 'p573*.nc'              # example of series glider datasets names, directory may be added 
 
