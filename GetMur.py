@@ -119,3 +119,12 @@ gli = plt.plot(df_g.surface_lon,df_g.surface_lat,'y',label='Glider')
 plt.legend(loc='upper left', shadow=True, fontsize='x-large')
 plt.savefig('Nearest points comparison Timeofdeploymnet')
 
+
+#######################################
+# Get values of analysis errors filed #
+#######################################
+
+error_murTimeofdeployment = xds.analysis_error 
+error_murTimeofdeployment = xr.DataArray.to_dataframe(error_murTimeofdeployment)
+error_murTimeofdeployment=error_murTimeofdeployment.dropna()
+pd.to_pickle(error_murTimeofdeployment,'error_murTimeofdeployment')
