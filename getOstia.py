@@ -106,4 +106,12 @@ sst_Ostia = xr.DataArray.to_dataframe(sst_Ostia)
 pd.to_pickle(sst_Ostia,'sst_OstiaTimeofdeployment.pkl')
 
 
+########################################
+# Get values of analysis errors fields #
+########################################
+
+error_ostiaTimeofdeployment = xds.analysis_error 
+error_ostiaTimeofdeployment = xr.DataArray.to_dataframe(error_ostiaTimeofdeployment)
+error_ostiaTimeofdeployment = error_ostiaTimeofdeployment.dropna()
+pd.to_pickle(error_ostiaTimeofdeployment,'error_ostiaTimeofdeployment')
 
