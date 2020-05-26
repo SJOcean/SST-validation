@@ -91,3 +91,11 @@ sst_remss = xds.analysed_sst -273.15 # REMSS SST also in Kelvin
 sst_remss = xr.DataArray.to_dataframe(sst_remss)
 pd.to_pickle(sst_remss,'sst_remssTimeofdeployment.pkl')
 
+########################################
+# Get values of analysis errors fields #
+########################################
+
+error_remssTimeofdeployment = xds.analysis_error 
+error_remssTimeofdeployment = xr.DataArray.to_dataframe(error_remssTimeofdeployment)
+pd.to_pickle(error_remssTimeofdeployment,'error_remssTimeofdeployment')
+
